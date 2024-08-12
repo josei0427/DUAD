@@ -1,0 +1,20 @@
+Dado un `tiempo en segundos`, calcule si es menor o mayor a 10 minutos.
+    1. Si es menor, muestre cuantos segundos faltarían para llegar a 10 minutos.
+    2. *Ejemplos*:
+        1. 1040 → Mayor
+        2. 140 → 160
+
+***RESPUESTA***
+1- Inicio
+2- Definir segundos
+3- Definir segundos_restantes
+4- Mostrar "Ingrese la cantidad de segundos"
+5- Pedir segundos
+6- Si segundos < 600:
+	i. segundos restantes = 600 - segundos
+	ii. Mostrar "Los segundos ingresados aun no alcanzan los 10 minutos, aun faltan"
+	iii. Mostrar segundos_restantes
+7- Sino:
+	i. Mostrar "Los segundos ingresados son mayor a los 10 minutos"
+8- FinSi
+9- Fin
