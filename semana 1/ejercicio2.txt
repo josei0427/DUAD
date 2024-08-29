@@ -1,0 +1,51 @@
+Cree un algoritmo que describa su rutina diaria. Use condiciones, condiciones multiples y ciclos.
+
+	1. Inicio
+	2. Me despierto:
+		a. Apago la alarma
+	3. Me levanto de la cama:
+		a. Arreglo la cama
+	4. Me baño
+	5. Me mudo
+	6. Si esta haciendo frio:
+		a. Me pongo una sueta
+	7. Sino, si tengo una camisa normal:
+		a. me ponga una camisa normal
+	8. Me lavo los dientes
+	9. Salir de casa
+	10. Si el Uber o Didi estan caros:
+		a. Espero a que baje la tarifa
+	11. Sino, si Uber o Didi estan baratos:
+		a. Pido el transporte para ir al trabajo
+	12. Llego al trabajo
+		a. Busco mi spot
+		b. Saco mi laptop
+		c. Enciendo mi lapton
+	13. Trabajo
+	14. Mientras no sean las 3 pm:
+		a. Me quedo en la oficina
+	15. Salgo de trabajar
+	16. Si el Uber o Didi estan caros:
+		a. Espero a que baje la tarifa
+	17. Sino, si Uber o Didi estan baratos:
+		a. Pido el transporte para ir a casa
+	18. Llego a casa
+	19. Mientras no sean las 5pm: 
+		a. Descanso
+	20. Voy al gym
+	21. Mientras no haya terminado mi rutina:
+		a. Me quedo en el gym hasta terminar rutina
+	22. Salgo del gym
+	23. Voy a casa
+	24. Me baño
+	25. Me mudo
+	26. Si hay cena:
+		a. Ceno
+	27. Sino, si hay alimentos para cocinar:
+		a. Cocino
+		b. Ceno
+	28. Me lavo los dientes
+	29. Mientras no sean las 11 pm:
+		a. Juego video juegos
+	30. Me voy a dormir
+	31. Fin
