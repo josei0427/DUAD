@@ -3,42 +3,10 @@ def get_info(my_list):
     while condition:
         name = input("Ingrese el nombre del estudiante: ")
         group_section = input("Ingrese la seccion del estudiante: ")
-        while condition:
-            try:
-                spanish_grade = int(input("Ingrese la nota de español del estudiante: "))
-                if 0 <= spanish_grade <= 100:
-                    break
-                else:
-                    print("Nota inválida. La nota debe estar entre 0 y 100.")
-            except ValueError:
-                print("Entrada inválida. Por favor, ingrese un número entero.")
-        while condition:
-            try:
-                english_grade = int(input("Ingrese la nota de inglés del estudiante: "))
-                if 0 <= english_grade <= 100:
-                    break
-                else:
-                    print("Nota inválida. La nota debe estar entre 0 y 100.")
-            except ValueError:
-                print("Entrada inválida. Por favor, ingrese un número entero.")
-        while condition:
-            try:
-                socials_grade = int(input("Ingrese la nota de sociales del estudiante: "))
-                if 0 <= socials_grade <= 100:
-                    break
-                else:
-                    print("Nota inválida. La nota debe estar entre 0 y 100.")
-            except ValueError:
-                print("Entrada inválida. Por favor, ingrese un número entero.")
-        while condition:
-            try:
-                science_grade = int(input("Ingrese la nota de ciencias del estudiante: "))
-                if 0 <= science_grade <= 100:
-                    break
-                else:
-                    print("Nota inválida. La nota debe estar entre 0 y 100.")
-            except ValueError:
-                print("Entrada inválida. Por favor, ingrese un número entero.")
+        spanish_grade = get_note("español")
+        english_grade = get_note("inglés")
+        socials_grade = get_note("sociales")
+        science_grade = get_note("ciencias")
                     
         info_dict = {
             "Nombre": name,
@@ -58,6 +26,19 @@ def get_info(my_list):
         elif option != "si":
             print("Opción no válida. Por favor, responda con 'si' o 'no'.")
     return my_list
+
+
+def get_note(subject):
+    condition = True
+    while condition:
+        try:
+            grade = int(input(f"Ingrese la nota de {subject} del estudiante: "))
+            if 0 <= grade <= 100:
+                return grade
+            else:
+                print("Nota inválida. La nota debe estar entre 0 y 100.")
+        except ValueError:
+            print("Entrada inválida. Por favor, ingrese un número entero.")
 
 
 def show_info(save_students):
@@ -86,10 +67,9 @@ def gpa_ofgpa(students_info):
         print("No hay información de estudiantes.")
         return
     all_gpa = []
-    num_ofstudents = 0
+    num_ofstudents = len(students_info)
     result = 0
     for i in students_info:
         all_gpa.append(i["Nota Promedio"])
-        num_ofstudents += 1
     result = sum(all_gpa) / num_ofstudents
     return result

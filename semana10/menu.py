@@ -12,6 +12,7 @@ def form_options():
             print("4- Ver la nota promedio entre las notas de todos los estudiantes.")
             print("5- Exportar todos los datos actuales.")
             print("6- Importar los datos de un archivo CSV previamente exportado")
+            print("7- Salir del programa")
             option = int(input("Elija que operacion le gustaria realizar: "))
 
             if option == 1: 
@@ -32,6 +33,10 @@ def form_options():
             elif option == 6:
                 import_data = data.import_info('students.csv')
                 print("Datos importados correctamente.")
+            elif option == 7:
+                end_message = ("Hasta luego!")
+                return end_message
+                break
             else:
                 print("ERROR: Seleccionó una opción inválida.")
             
