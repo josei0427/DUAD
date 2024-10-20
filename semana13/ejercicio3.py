@@ -14,16 +14,14 @@ class User:
 
 def user_review(func):
     def wrapper(user):
+        if user.age < 18:
+            raise ValueError(f'Eres menor de edad, no puedes ingresar.')
         return func(user)
     return wrapper
 
 @user_review
 def age_checker(user):
-    if user.age < 18:
-        raise ValueError(f'Eres menor de edad, no puedes ingresar.')
-    else:
-        print("BIENVENIDO!")
-        
+    print("BIENVENIDO!")
 
 
 Amy = User('1997-10-22')

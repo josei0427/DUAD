@@ -7,7 +7,7 @@ def grocery_list(func):
 
 
 @grocery_list
-def Add_item(*args):
+def add_item(*args):
     print(f'Se necesita comprar: {args}')
     return
 
