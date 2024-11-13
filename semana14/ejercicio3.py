@@ -1,5 +1,3 @@
-from collections import deque
-
 class Node:
     def __init__(self, value):
         self.value = value
@@ -23,9 +21,9 @@ class Node:
     def print_tree(self):
         if not self:
             return
-        queue = deque([self])
+        queue = [self]
         while queue:
-            node = queue.popleft()
+            node = queue.pop(0)
             print(node.value, end=" ")
             
             if node.left:
