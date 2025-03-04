@@ -1,15 +1,15 @@
 import PySimpleGUI as sg
 
 def category_window(lst_cats):
-    headers = ['Categorias existentes']
+    headers = ['Existing categories']
     layout = [
-        [sg.Text("Agregar una categoria", font=("Helvetica", 16, ))],
-        [sg.Text("Ingrese el nombre de la categoria"), sg.InputText(key='-CATEGORY-')],
+        [sg.Text("Add a category", font=("Helvetica", 16, ))],
+        [sg.Text("Enter the name for the category"), sg.InputText(key='-CATEGORY-')],
         [sg.Table(values= lst_cats, headings=headers, key='-TABLE-', auto_size_columns=True, justification='right')],
         [sg.Button("Accept", bind_return_key=True)]
     ]
 
-    window = sg.Window('Manejo de Finanzas', layout)
+    window = sg.Window('Financial Management System', layout)
 
     while True:
         event, values = window.read()

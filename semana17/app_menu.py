@@ -24,20 +24,20 @@ def show_main_window():
         if event == sg.WIN_CLOSED:
             break
         elif event == "Add an income":
-            agregar_ingreso.income_window(data_from_user, lst_cats)
+            add_income.income_window(data_from_user, lst_cats)
             window['-TABLE-'].update(values=data_from_user)
-            export_to_csv(data_from_user)
+            export_data(data_from_user)
         elif event == "Add an expense":
-            agregar_gasto.expense_window(data_from_user, lst_cats)
+            add_expense.expense_window(data_from_user, lst_cats)
             window['-TABLE-'].update(values=data_from_user)
-            export_to_csv(data_from_user)
+            export_data(data_from_user)
         elif event == "Add a category":
-            agregar_categoria.category_window(lst_cats)
+            add_category.category_window(lst_cats)
             export_categories(lst_cats)
 
     window.close()
 
-def export_to_csv(data_from_user):
+def export_data(data_from_user):
     the_file = 'Financial.csv'
     with open(the_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter='\t')
