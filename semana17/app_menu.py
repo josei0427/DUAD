@@ -1,52 +1,51 @@
 import PySimpleGUI as sg
 import csv
-import os  # Importamos os para verificar la existencia del archivo
-import agregar_ingreso
-import agregar_gasto
-import agregar_categoria
+import add_income
+import add_expense
+import add_category
 
 def show_main_window():
-    headers = ['Titulo', 'Categoria', 'Ingreso o Gasto', 'Monto']
+    headers = ['Title', 'Category', 'Income or Expense', 'Amount']
     data_from_user = import_data()
     lst_cats = lst_cats = import_categories()
 
     layout = [
-        [sg.Text("Sistema de Manejo de Finanzas", font=("Helvetica", 16), justification="center")],
-        [sg.Button("Agregar un ingreso")],
-        [sg.Button("Agregar un gasto")],
-        [sg.Button("Agregar una categoria")],
+        [sg.Text("Financial Management System", font=("Helvetica", 16), justification="center")],
+        [sg.Button("Add an income")],
+        [sg.Button("Add an expense")],
+        [sg.Button("Add a category")],
         [sg.Table(values=data_from_user, headings=headers, key='-TABLE-', auto_size_columns=True, justification='right')]
     ]
 
-    window = sg.Window('Manejo de Finanzas', layout)
+    window = sg.Window('Financial Management System', layout)
 
     while True:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
             break
-        elif event == "Agregar un ingreso":
+        elif event == "Add an income":
             agregar_ingreso.income_window(data_from_user, lst_cats)
             window['-TABLE-'].update(values=data_from_user)
             export_to_csv(data_from_user)
-        elif event == "Agregar un gasto":
+        elif event == "Add an expense":
             agregar_gasto.expense_window(data_from_user, lst_cats)
             window['-TABLE-'].update(values=data_from_user)
             export_to_csv(data_from_user)
-        elif event == "Agregar una categoria":
+        elif event == "Add a category":
             agregar_categoria.category_window(lst_cats)
             export_categories(lst_cats)
 
     window.close()
 
 def export_to_csv(data_from_user):
-    the_file = 'Finanzas.csv'
+    the_file = 'Financial.csv'
     with open(the_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter='\t')
-        writer.writerow(['Titulo', 'Categoria', 'Ingreso o Gasto', 'Monto'])
+        writer.writerow(['Title', 'Category', 'Income or Expense', 'Amount'])
         writer.writerows(data_from_user)
 
 def import_data():
-    the_file = 'Finanzas.csv'
+    the_file = 'Financial.csv'
     data_from_user = []
     try:
         with open(the_file, mode='r', newline='', encoding='utf-8') as file:
@@ -59,22 +58,22 @@ def import_data():
     return data_from_user
 
 def export_categories(lst_cats):
-    categories_file = 'Categorias.csv'
+    categories_file = 'Categories.csv'
     with open(categories_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Categoria'])
+        writer.writerow(['Category'])
         for i in lst_cats:
             writer.writerow([i])
 
 def import_categories():
-    categories_file = 'Categorias.csv'
+    categories_file = 'Categories.csv'
     lst_cats = []
     try:
         with open(categories_file, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader)
-            for row in reader:
-                lst_cats.append(row[0])
+            for i in reader:
+                lst_cats.append(i[0])
     except FileNotFoundError:
         pass
     return lst_cats
