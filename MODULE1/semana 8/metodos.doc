@@ -1,0 +1,17 @@
+Método	Descripción
+close()	-	Cerrar un archivo después de haberlo abierto.
+detach()	-	Devuelve el flujo sin formato separado del búfer.
+fileno()	-	Este método devuelve el descriptor de archivo de la secuencia, como un número.
+flush()	-	Este método limpia el buffer interno.
+isatty()	-	Devuelve True si la secuencia de archivos es interactiva.
+read()	-	Lee y retorna todo el contenido del archive.
+readable()	-	Devuelve True si el archivo es legible, False si no.
+readline()	-	Lee una línea del archivo.
+readlines()	-	Lee todo el contenido del archivo y retorna una lista con cada línea.
+seek()	-	Establece la posición actual del archivo en una secuencia de archivos.
+seekable()	-	Devuelve True si el archivo se puede buscar y False en caso contrario.
+tell()	-	Devuelve la posición actual del archivo
+truncate()	-	El método cambia el tamaño del archivo al número de bytes indicado.
+writable()	-	Devuelve True si se puede escribir en el archivo, False si no.
+write()	-	Escribe contenidos en un archivo.
+writelines()	-	El método escribe los elementos de una lista en el archivo.
