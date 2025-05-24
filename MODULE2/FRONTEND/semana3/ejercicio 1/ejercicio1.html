@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style1.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="main-div">
+            <form action="https://www.gollo.com/" method="POST">
+                <h1>Elections 2026</h1>
+                <p>Please fill out the following information:</p>
+                <div class="form-info">
+                    <br />
+                    <input type="text" id="form-space" name="name" placeholder="First and Last name *"/>
+                    <br />
+                    <br />
+                    <input type="text" id="form-space" name="email" placeholder="Email address *"/>
+                    <br />
+                    <br />
+                    <input type="text" id="form-space" name="personal_id" placeholder="Personal ID *"/>
+                    <br />
+                    <br />
+                    <input type="text" id="form-space" name="phone_num" placeholder="Phone number *"/>
+                    <br /><br />
+                    <select name="type" id="type">
+                        <option hidden>Select one</option>
+                        <option value="Candidate#1">Candidate#1</option>
+                        <option value="Candidate#2">Candidate#2</option>
+                        <option value="Candidate#3">Candidate#3</option>
+                    </select>
+                </div>
+                <br /><br />
+                <input id="submit-info" type="submit" value="Send my form"/>
+            </form>
+        </div>
+    </body>
+</html>
