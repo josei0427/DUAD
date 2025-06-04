@@ -21,6 +21,17 @@ body {
     margin-bottom: 1rem;
 }
 
+.selecs{
+    width: 21.7rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #f7f9fc;
+    color: #666;
+}
+
 .contact-form h2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -34,7 +45,6 @@ body {
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
     width: 20rem;
     padding: 0.8rem;
@@ -51,9 +61,9 @@ body {
 
 .email-icon {
     position: absolute;
-    right: -40px;
+    right: -50px;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-90%);
     color: #999;
 }
 
