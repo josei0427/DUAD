@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 25rem;
+    border: 1rem solid #6666ff;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 2em;
+}
+
+.main-div {
+    padding: 2rem;
+    width: 70%;
+    max-width: 420px;
+}
+
+.p_dash{
+    width: 2rem;
+    height: 4px;
+    background-color: #6666ff;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+
+.selecs{
+    width: 21.7rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #f7f9fc;
+    color: #666;
+}
+
+.contact-form h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-form p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 20rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #f7f9fc;
+}
+
+.email-wrapper {
+    position: relative;
+}
+
+.email-icon {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-90%);
+    color: #999;
+}
+
+#submit-info{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    border-radius: 0.4rem;
+    background-color: #6666ff;
+    border: none;
+}
+
+footer {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.powered-logo {
+    color: #2563eb;
+}
