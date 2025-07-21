@@ -1,0 +1,39 @@
+.cards_row1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.cards_row2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-body {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    margin: 5rem;
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin-top: 0;
+}
+
+.link {
+    display: inline-block;
+    color: rgb(71, 181, 249);
+    text-decoration: none;
+    border-radius: 4px;
+}

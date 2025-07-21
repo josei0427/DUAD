@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <form action="https://www.gollo.com/" method="POST">
+        <h1>Elecciones 2026</h1>
+        <p>Por favor completar la siguiente información:</p>
+
+        <label for="first_name">Nombre completo</label>
+        <br />
+        <input type="text" id="name" name="name"/>
+        <br />
+        <label for="last_name">Correo eléctronico</label>
+        <br />
+        <input type="text" id="email" name="email"/>
+        <br />
+        <label for="email">Numero de Identificación</label>
+        <br />
+        <input type="text" id="personal_id" name="personal_id"/>
+        <br />
+        <label for="email">Teléfono</label>
+        <br />
+        <input type="text" id="phone_num" name="phone_num"/>
+        <br /><br />
+        <select name="type" id="type">
+            <option hidden>Seleccione uno</option>
+            <option value="Candidate#1">Candidato#1</option>
+            <option value="Candidate#2">Candidato#2</option>
+            <option value="Candidate#3">Candidato#3</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="Completar elección"/>
+    </form>
+</html>
