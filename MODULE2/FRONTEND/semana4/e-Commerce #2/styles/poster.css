@@ -1,0 +1,54 @@
+.poster{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffe2e4;
+    border-radius: 0.4rem;
+    height: 19rem;
+    .poster-image{
+        height: 11rem;
+        margin-top: 4rem;
+        margin-right: -5rem;
+    }
+    .poster-content{
+        margin-left: 0;
+        width: 50%;
+        width: 50%;
+        margin-left: -10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p{
+            margin: 0;
+        }
+        .sup-text{
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .main-text{
+            margin-top: 0.5rem;
+            font-size: small;
+            color: #7f7f7f;
+        }
+        .price-text{
+            margin-top: 0.7rem;
+            color: rgb(255, 73, 231);
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .shop-button{
+            background-color: rgb(255, 73, 231);
+            color: white;
+            width: 5.3rem;
+            height: 2rem;
+            margin-top: 0.4rem;
+            border: none;
+            border-radius: 0.6rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.add-info{
+    margin-top: 2rem;
+}
