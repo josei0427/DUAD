@@ -1,0 +1,18 @@
+<div>
+    <input type="text" id="text-box" placeholder="Type anything">
+    <button id='submit-button'>Submit!</button>
+</div>
+
+<script>
+    const textBox = document.getElementById('text-box');
+    const subButton = document.getElementById('submit-button');
+
+    const printData = () => {
+        const data = document.createElement('p');
+        data.innerHTML = textBox.value;
+        document.body.appendChild(data);
+        textBox.value = "";
+    }
+
+    subButton.addEventListener('click', printData)
+</script>
