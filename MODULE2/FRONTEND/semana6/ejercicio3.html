@@ -1,0 +1,40 @@
+<div>
+    <input type="text" placeholder="Name"><br>
+    <input type="text" placeholder="Last Name"><br>
+    <input type="email" placeholder="Email"><br>
+    <input type="password" placeholder="Password"><br>
+    <p>Are you an employee?</p>
+    <label>
+        <input type="radio" name="empleado" id="yes"> Yes
+    </label>
+    <label>
+        <input type="radio" name="empleado" id="no"> No
+    </label>
+    <div id="employee-container"></div>
+</div>
+
+<script>
+    const yesRadio = document.getElementById('yes');
+    const noRadio = document.getElementById('no');
+    const employeeContainer = document.getElementById('employee-container');
+    let textInput = undefined;
+
+    const yRadio = () => {
+        if (yesRadio.checked) {
+            textInput = document.createElement('input');
+            textInput.type = 'text', textInput.placeholder = 'Enter Employee ID';
+            employeeContainer.appendChild(textInput);
+        }
+    }
+
+    const nRadio = () => {
+        if (noRadio.checked) {
+            employeeContainer.removeChild(textInput);
+            textInput = undefined;
+        }
+    }
+
+    yesRadio.addEventListener('change', yRadio);
+    noRadio.addEventListener('change', nRadio);
+
+</script>
