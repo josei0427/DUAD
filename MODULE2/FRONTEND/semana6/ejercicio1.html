@@ -1,0 +1,23 @@
+<div>
+    <button id='add-button'>Add item!</button>
+    <button id='remove-button'>Remove item!</button>
+    <ul id='list'></ul>
+</div>
+
+<script> 
+    const addButton = document.getElementById('add-button');
+    const removeButton = document.getElementById('remove-button');
+    const addItem = () => {
+        const item = document.createElement('li')
+        item.innerHTML = 'New item'
+        const list = document.getElementById('list')
+        list.appendChild(item)
+    }
+    const removeItem = () => {
+        const list = document.getElementById('list')
+        list.innerHTML = "";
+    }
+
+    addButton.addEventListener('click', addItem)
+    removeButton.addEventListener('click', removeItem)
+</script>
