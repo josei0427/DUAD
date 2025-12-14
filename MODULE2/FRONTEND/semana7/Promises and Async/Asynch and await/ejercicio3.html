@@ -1,0 +1,40 @@
+<div>
+    <input type="text" id="my-text">
+    <button id="my-button">Submit!</button>
+</div>
+
+<script>
+    const myText = document.getElementById("my-text");
+    const myButton = document.getElementById("my-button");
+    const findUser = () =>{
+        const theValue = myText.value;
+        async function fetchData() {
+            try {
+                const response = await fetch(`https://reqres.in/api/users/${theValue}`, {
+            headers: {
+                'x-api-key': 'reqres_2c9ba126d4634626b05ec07fff7e7701'
+            }
+            });
+                if (!response.ok) {
+                    const result = document.createElement('p');
+                    result.innerHTML = "The user doesn't exist"
+                    document.body.appendChild(result);
+                    return;
+                }
+                const myData = await response.json();
+                const result = document.createElement('p');
+                result.innerHTML = `
+                    <strong>Nombre:</strong> ${myData.data.first_name}<br>
+                    <strong>Apellido:</strong> ${myData.data.last_name}<br>
+                    <strong>Correo:</strong> ${myData.data.email}
+                `;
+                document.body.appendChild(result);
+            }
+            catch (error) {
+                console.error("There was an error:", error);
+            }
+        }
+        fetchData();
+    }
+    myButton.addEventListener('click', findUser);
+</script>
